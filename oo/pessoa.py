@@ -9,6 +9,14 @@ class Pessoa:
     def cumprimentar(self):
         return f'OPA {id(self)}'
 
+    #DECORATOR
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - meus olhos: {cls.olhos}'
 
 if __name__ == '__main__':
     print('==========METODOS==========')
@@ -79,3 +87,14 @@ if __name__ == '__main__':
     print(id(Pessoa.olhos), id(p.olhos), id(p2.olhos), id(p3.olhos))
     print()
 
+    print('==========METODOS DE CLASSE  ==========')
+    print(Pessoa.metodo_estatico())
+    print(p.metodo_estatico())
+    print(p2.metodo_estatico())
+    print(p3.metodo_estatico())
+    print()
+
+    print(Pessoa.nome_e_atributos_de_classe())
+    print(p.nome_e_atributos_de_classe())
+    print(p2.nome_e_atributos_de_classe())
+    print(p3.nome_e_atributos_de_classe())
