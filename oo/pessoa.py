@@ -22,3 +22,12 @@ if __name__ == '__main__':
     print(f'Filhos de {juca.nome}:')
     for filho in juca.filhos:
         print(filho.nome)
+
+    print('=====================')
+    juca.sobrenome = 'Pirama'
+    print(juca.__dict__)
+    print('=====================')
+    print(evandro.__dict__)
+    print('=====================')
+    del juca.filhos
+    print(juca.__dict__)
